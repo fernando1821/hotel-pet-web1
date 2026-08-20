@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Pet - Fazer Reserva</title>
+</head>
+<body>
+
+    <!-- MENU LATERAL -->
+    <aside>
+        <h1>Hotel Pet</h1>
+        <nav>
+            <ul>
+                <li><a href="pets.html">Pet</a></li>
+                <li><a href="usuarios.html">Usuários</a></li>
+                <li><a href="configuracoes.html">Configurações</a></li>
+                <!-- A classe "ativo" continua em Reservas -->
+                <li class="ativo"><a href="reservas.html">Reservas</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- ÁREA PRINCIPAL -->
+    <main>
+        <!-- CABEÇALHO -->
+        <header>
+            <div class="perfil">
+                <img src="foto-padrao.jpg" alt="Foto do usuário">
+                <span>João da Silva</span>
+            </div>
+        </header>
+
+        <!-- CONTEÚDO: FAZER RESERVA -->
+        <section class="conteudo">
+            <p>Home / revervas / nova reserva</p>
+            
+            <div class="cartao-formulario">
+                <h2>Fazer reserva</h2>
+
+                <form action="reservas.html" method="POST">
+                    
+                    <!-- Campo Pet -->
+                    <div class="grupo-input">
+                        <label for="pet">Pet *</label>
+                        <!-- Usando value="Max" para simular o protótipo -->
+                        <input type="text" id="pet" name="pet" value="Max" required>
+                    </div>
+
+                    <!-- Campos de Período -->
+                    <div class="grupo-input">
+                        <label>Período *</label>
+                        <div class="datas-lado-a-lado">
+                            <input type="date" name="data-chegada" value="2021-05-02" required title="Data de Chegada">
+                            <input type="date" name="data-partida" value="2021-05-07" required title="Data de Partida">
+                        </div>
+                    </div>
+
+                    <!-- Campo Notas -->
+                    <div class="grupo-input">
+                        <label for="notas">Notas</label>
+                        <!-- Textarea permite múltiplas linhas. As linhas e colunas ajudam no tamanho inicial antes do CSS -->
+                        <textarea id="notas" name="notas" rows="4" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit."></textarea>
+                    </div>
+
+                    <!-- Total (Texto Estático) -->
+                    <div class="total-diarias">
+                        <span>Total das diárias: <strong class="valor-destaque">R$ 40,00</strong></span>
+                    </div>
+
+                    <!-- Botões -->
+                    <div class="botoes-form-rodape">
+                        <button type="submit" class="btn-salvar">Salvar</button>
+                        <button type="reset" class="btn-limpar">Limpar</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

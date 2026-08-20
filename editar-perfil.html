@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Pet - Editar Perfil</title>
+</head>
+<body>
+
+    <!-- MENU LATERAL -->
+    <aside>
+        <h1>Hotel Pet</h1>
+        <nav>
+            <ul>
+                <li><a href="pets.html">Pet</a></li>
+                <!-- A classe "ativo" continua em Usuários, conforme o protótipo -->
+                <li class="ativo"><a href="usuarios.html">Usuários</a></li>
+                <li><a href="configuracoes.html">Configurações</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- ÁREA PRINCIPAL -->
+    <main>
+        <!-- CABEÇALHO -->
+        <header>
+            <div class="perfil">
+                <img src="foto-padrao.jpg" alt="Foto do usuário">
+                <span>João da Silva</span>
+            </div>
+        </header>
+
+        <!-- CONTEÚDO: EDITAR PERFIL -->
+        <section class="conteudo">
+            <!-- Breadcrumb atualizado para o perfil -->
+            <p>Home / Editar Perfil</p>
+            
+            <div class="cartao-formulario">
+                <h2>Editar Perfil</h2>
+
+                <form action="usuarios.html" method="POST">
+                    
+                    <!-- Email -->
+                    <div class="grupo-input">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" value="joaodasilva@pet.com" required>
+                    </div>
+
+                    <!-- Nome -->
+                    <div class="grupo-input">
+                        <label for="nome">Nome *</label>
+                        <input type="text" id="nome" name="nome" value="João" required>
+                    </div>
+
+                    <!-- Sobrenome -->
+                    <div class="grupo-input">
+                        <label for="sobrenome">Sobrenome</label>
+                        <input type="text" id="sobrenome" name="sobrenome" value="da Silva">
+                    </div>
+
+                    <!-- Telefone -->
+                    <div class="grupo-input">
+                        <label for="telefone">Telefone *</label>
+                        <input type="tel" id="telefone" name="telefone" value="+55 (73) 99876-8943" required>
+                    </div>
+
+                    <!-- Função -->
+                    <div class="grupo-input">
+                        <label for="funcao">Função</label>
+                        <select id="funcao" name="funcao">
+                            <!-- A opção Funcionário já vem selecionada -->
+                            <option value="funcionario" selected>Funcionário</option>
+                            <option value="cliente">Cliente</option>
+                            <option value="gerente">Gerente</option>
+                        </select>
+                    </div>
+
+                    <!-- Área de Upload da Foto -->
+                    <div class="grupo-input">
+                        <!-- O placeholder da foto será estilizado via CSS depois -->
+                        <div class="box-upload-imagem">
+                            <input type="file" id="foto" name="foto" accept="image/*">
+                        </div>
+                    </div>
+
+                    <!-- Botões -->
+                    <div class="botoes-form-rodape">
+                        <button type="submit" class="btn-salvar">Salvar</button>
+                        <button type="reset" class="btn-limpar">Limpar</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Pet - Novo Pet</title>
+</head>
+<body>
+
+    <!-- MENU LATERAL -->
+    <aside>
+        <h1>Hotel Pet</h1>
+        <nav>
+            <ul>
+                <!-- A classe "ativo" volta para a seção Pet -->
+                <li class="ativo"><a href="pets.html">Pet</a></li>
+                <li><a href="usuarios.html">Usuários</a></li>
+                <li><a href="configuracoes.html">Configurações</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- ÁREA PRINCIPAL -->
+    <main>
+        <!-- CABEÇALHO -->
+        <header>
+            <div class="perfil">
+                <img src="foto-padrao.jpg" alt="Foto do usuário">
+                <span>João da Silva</span>
+            </div>
+        </header>
+
+        <!-- CONTEÚDO: NOVO PET -->
+        <section class="conteudo">
+            <p>Home / Pet / Novo Pet</p>
+            
+            <div class="cartao-formulario">
+                <h2>Novo Pet</h2>
+
+                <!-- O action aponta para a tela de listagem para simular que salvou e voltou -->
+                <form action="pets.html" method="POST">
+                    
+                    <div class="layout-duas-colunas">
+                        
+                        <!-- COLUNA ESQUERDA: Campos de Texto -->
+                        <div class="coluna-campos">
+                            <!-- Conforme a descrição do projeto, o gerente/funcionário preenche o proprietário -->
+                            <div class="grupo-input">
+                                <label for="proprietario">Proprietário *</label>
+                                <input type="text" id="proprietario" name="proprietario" required>
+                            </div>
+
+                            <div class="grupo-input">
+                                <label for="nome">Nome *</label>
+                                <input type="text" id="nome" name="nome" required>
+                            </div>
+
+                            <div class="grupo-input">
+                                <label for="tipo">Tipo *</label>
+                                <select id="tipo" name="tipo" required>
+                                    <option value="">Selecione...</option>
+                                    <option value="cachorro">Cachorro</option>
+                                    <option value="gato">Gato</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+
+                            <div class="grupo-input">
+                                <label for="raca">Raça *</label>
+                                <input type="text" id="raca" name="raca" required>
+                            </div>
+
+                            <div class="grupo-input">
+                                <label for="tamanho">Tamanho *</label>
+                                <select id="tamanho" name="tamanho" required>
+                                    <option value="">Selecione...</option>
+                                    <option value="pequeno">Pequeno</option>
+                                    <option value="medio">Médio</option>
+                                    <option value="grande">Grande</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- COLUNA DIREITA: Área da Imagem -->
+                        <div class="coluna-imagem">
+                            <label for="foto">Imagem</label>
+                            <div class="box-upload-imagem">
+                                <!-- input type="file" permite que o usuário escolha um arquivo do computador -->
+                                <input type="file" id="foto" name="foto" accept="image/*">
+                            </div>
+                        </div>
+
+                    </div> <!-- fim do layout duas colunas -->
+
+                    <!-- BOTÕES DE AÇÃO -->
+                    <div class="botoes-form-rodape">
+                        <button type="submit" class="btn-salvar">Salvar</button>
+                        <button type="reset" class="btn-limpar">Limpar</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

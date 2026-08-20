@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Pet - Editar Reserva</title>
+</head>
+<body>
+
+    <!-- MENU LATERAL -->
+    <aside>
+        <h1>Hotel Pet</h1>
+        <nav>
+            <ul>
+                <li><a href="pets.html">Pet</a></li>
+                <li><a href="usuarios.html">Usuários</a></li>
+                <li><a href="configuracoes.html">Configurações</a></li>
+                <!-- A classe "ativo" continua em Reservas -->
+                <li class="ativo"><a href="reservas.html">Reservas</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- ÁREA PRINCIPAL -->
+    <main>
+        <!-- CABEÇALHO -->
+        <header>
+            <div class="perfil">
+                <img src="foto-padrao.jpg" alt="Foto do usuário">
+                <span>João da Silva</span>
+            </div>
+        </header>
+
+        <!-- CONTEÚDO: EDITAR RESERVA -->
+        <section class="conteudo">
+            <p>Home / revervas / editar reserva</p>
+            
+            <div class="cartao-formulario">
+                <h2>Editar reserva</h2>
+
+                <form action="reservas.html" method="POST">
+                    
+                    <!-- Proprietário -->
+                    <div class="grupo-input">
+                        <label for="proprietario">Proprietário *</label>
+                        <input type="text" id="proprietario" name="proprietario" value="José da Silva" required>
+                    </div>
+
+                    <!-- Pet -->
+                    <div class="grupo-input">
+                        <label for="pet">Pet *</label>
+                        <input type="text" id="pet" name="pet" value="Max" required>
+                    </div>
+
+                    <!-- Período -->
+                    <div class="grupo-input">
+                        <label>Período *</label>
+                        <div class="datas-lado-a-lado">
+                            <input type="date" name="data-chegada" value="2021-05-02" required>
+                            <input type="date" name="data-partida" value="2021-05-07" required>
+                        </div>
+                    </div>
+
+                    <!-- Notas -->
+                    <div class="grupo-input">
+                        <label for="notas">Notas</label>
+                        <!-- No textarea, o valor preenchido fica entre as tags de abertura e fechamento -->
+                        <textarea id="notas" name="notas" rows="4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea>
+                    </div>
+
+                    <!-- Status da Reserva -->
+                    <div class="grupo-input">
+                        <label for="status">Status*</label>
+                        <select id="status" name="status" required>
+                            <option value="reservada">Reservada</option>
+                            <option value="em-progresso">Em progresso</option>
+                            <!-- Como é uma edição de reserva finalizada, essa opção vem selecionada -->
+                            <option value="finalizada" selected>Finalizada</option>
+                        </select>
+                    </div>
+
+                    <!-- Total das Diárias -->
+                    <div class="total-diarias">
+                        <span>Total das diárias: <strong class="valor-destaque">R$ 40,00</strong></span>
+                    </div>
+
+                    <!-- Área de Anexos (Nota Fiscal / Recibo) -->
+                    <div class="area-anexos">
+                        
+                        <!-- Truque do input de arquivo oculto -->
+                        <div class="upload-nota">
+                            <label for="nota-fiscal" class="btn-adicionar-nota">📎 Adicionar nota Fiscal</label>
+                            <!-- Deixei um style inline só pra esconder agora, mas o ideal é fazer isso no CSS semana que vem -->
+                            <input type="file" id="nota-fiscal" name="nota-fiscal" accept=".pdf, image/*" style="display: none;">
+                        </div>
+
+                        <!-- Link do arquivo já upado (conforme o protótipo) -->
+                        <div class="arquivo-anexado" style="margin-top: 15px;">
+                            <a href="recibo.pdf" target="_blank" class="link-anexo">📎 recibo.pdf</a>
+                        </div>
+                    </div>
+
+                    <!-- Botões -->
+                    <div class="botoes-form-rodape">
+                        <button type="submit" class="btn-salvar">Salvar</button>
+                        <button type="reset" class="btn-limpar">Limpar</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

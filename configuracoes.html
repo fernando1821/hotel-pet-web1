@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Pet - Configurações</title>
+</head>
+<body>
+
+    <!-- MENU LATERAL -->
+    <aside>
+        <h1>Hotel Pet</h1>
+        <nav>
+            <ul>
+                <li><a href="pets.html">Pet</a></li>
+                <li><a href="usuarios.html">Usuário</a></li>
+                <!-- A classe "ativo" agora destaca as Configurações -->
+                <li class="ativo"><a href="configuracoes.html">Configurações</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- ÁREA PRINCIPAL -->
+    <main>
+        <!-- CABEÇALHO -->
+        <header>
+            <div class="perfil">
+                <img src="foto-padrao.jpg" alt="Foto do usuário">
+                <span>João da Silva</span>
+            </div>
+        </header>
+
+        <!-- CONTEÚDO: CONFIGURAÇÕES -->
+        <section class="conteudo">
+            <p>Home / Configurações</p>
+            
+            <div class="cartao-formulario">
+                <h2>Configurações</h2>
+
+                <form action="#" method="POST">
+                    
+                    <!-- Valor da diária -->
+                    <div class="grupo-input">
+                        <label for="valor-diaria">Valor da diária</label>
+                        <!-- Usando value para simular o protótipo -->
+                        <input type="text" id="valor-diaria" name="valor-diaria" value="R$ 10,00" required>
+                    </div>
+
+                    <!-- Vagas disponíveis -->
+                    <div class="grupo-input">
+                        <label for="vagas">Vagas disponíveis</label>
+                        <!-- type="number" adiciona aquelas setinhas de aumentar/diminuir o número -->
+                        <input type="number" id="vagas" name="vagas" value="3" min="0" required>
+                    </div>
+
+                    <!-- Botões -->
+                    <div class="botoes-form-rodape">
+                        <button type="submit" class="btn-salvar">Salvar</button>
+                        <button type="reset" class="btn-limpar">Limpar</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Pet - Editar Reserva</title>
+</head>
+<body>
+
+    <!-- MENU LATERAL -->
+    <aside>
+        <h1>Hotel Pet</h1>
+        <nav>
+            <ul>
+                <li><a href="pets.html">Pet</a></li>
+                <li><a href="usuarios.html">Usuários</a></li>
+                <li><a href="configuracoes.html">Configurações</a></li>
+                <li class="ativo"><a href="reservas.html">Reservas</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- ÁREA PRINCIPAL -->
+    <main>
+        <!-- CABEÇALHO -->
+        <header>
+            <div class="perfil">
+                <img src="foto-padrao.jpg" alt="Foto do usuário">
+                <span>João da Silva</span>
+            </div>
+        </header>
+
+        <!-- CONTEÚDO: EDITAR RESERVA EM ANDAMENTO -->
+        <section class="conteudo">
+            <p>Home / revervas / editar reserva</p>
+            
+            <div class="cartao-formulario">
+                <h2>Editar reserva</h2>
+
+                <form action="reservas.html" method="POST">
+                    
+                    <!-- Proprietário -->
+                    <div class="grupo-input">
+                        <label for="proprietario">Proprietário *</label>
+                        <input type="text" id="proprietario" name="proprietario" value="José da Silva" required>
+                    </div>
+
+                    <!-- Pet -->
+                    <div class="grupo-input">
+                        <label for="pet">Pet *</label>
+                        <input type="text" id="pet" name="pet" value="Max" required>
+                    </div>
+
+                    <!-- Período -->
+                    <div class="grupo-input">
+                        <label>Período *</label>
+                        <div class="datas-lado-a-lado">
+                            <input type="date" name="data-chegada" value="2021-05-02" required>
+                            <input type="date" name="data-partida" value="2021-05-07" required>
+                        </div>
+                    </div>
+
+                    <!-- Notas (do cliente) -->
+                    <div class="grupo-input">
+                        <label for="notas">Notas</label>
+                        <textarea id="notas" name="notas" rows="3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea>
+                    </div>
+
+                    <!-- Status -->
+                    <div class="grupo-input">
+                        <label for="status">Status*</label>
+                        <select id="status" name="status" required>
+                            <option value="reservada">Reservada</option>
+                            <option value="em-andamento" selected>Em andamento</option>
+                            <option value="finalizada">Finalizada</option>
+                        </select>
+                    </div>
+
+                    <!-- Anotações do Funcionário -->
+                    <div class="grupo-input">
+                        <label for="anotacoes-funcionario">Anotações do funcionário</label>
+                        <textarea id="anotacoes-funcionario" name="anotacoes-funcionario" rows="3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea>
+                    </div>
+
+                    <!-- Upload de Imagens do dia a dia -->
+                    <div class="grupo-input">
+                        <div class="galeria-upload">
+                            <!-- Imagem que já foi enviada (quadrado com X no protótipo) -->
+                            <img src="placeholder-quadrado.jpg" alt="Imagem enviada" width="60" height="60">
+                            
+                            <!-- Botão + para adicionar nova imagem (usando o truque do label) -->
+                            <label for="nova-imagem" class="btn-adicionar-quadrado">
+                                <!-- O span simula o "+" centralizado que estilizaremos no CSS -->
+                                <span style="font-size: 24px; color: #999;">+</span>
+                            </label>
+                            <input type="file" id="nova-imagem" name="nova-imagem" accept="image/*" style="display: none;">
+                        </div>
+                    </div>
+
+                    <!-- Total das Diárias -->
+                    <div class="total-diarias">
+                        <span>Total das diárias: <strong class="valor-destaque">R$ 40,00</strong></span>
+                    </div>
+
+                    <!-- Botões -->
+                    <div class="botoes-form-rodape">
+                        <button type="submit" class="btn-salvar">Salvar</button>
+                        <button type="reset" class="btn-limpar">Limpar</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Pet - Reservas</title>
+</head>
+<body>
+
+    <!-- MENU LATERAL -->
+    <aside>
+        <h1>Hotel Pet</h1>
+        <nav>
+            <ul>
+                <li><a href="pets.html">Pet</a></li>
+                <li><a href="usuarios.html">Usuários</a></li>
+                <li><a href="configuracoes.html">Configurações</a></li>
+                <!-- A classe "ativo" agora vem para o menu de Reservas -->
+                <li class="ativo"><a href="reservas.html">Reservas</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- ÁREA PRINCIPAL -->
+    <main>
+        <!-- CABEÇALHO -->
+        <header>
+            <div class="perfil">
+                <img src="foto-padrao.jpg" alt="Foto do usuário">
+                <span>João da Silva</span>
+            </div>
+        </header>
+
+        <!-- CONTEÚDO: RESERVAS -->
+        <section class="conteudo">
+            <p>Home / Reservas</p>
+            <h2>Reservas</h2>
+            
+            <a href="fazer-reserva.html"><button>+ Nova reserva</button></a>
+
+            <!-- CAIXA DO FORMULÁRIO DE PESQUISA -->
+            <div class="caixa-pesquisa">
+                <form action="#" method="GET">
+                    
+                    <div class="grupo-campos">
+                        <div>
+                            <label for="id">Id</label>
+                            <input type="text" id="id" name="id">
+                        </div>
+
+                        <div>
+                            <label>período</label>
+                            <!-- Dois campos de data para o período -->
+                            <input type="date" name="data-inicio" title="Data de Início">
+                            <input type="date" name="data-fim" title="Data de Fim">
+                        </div>
+
+                        <div>
+                            <label for="proprietario">proprietário</label>
+                            <input type="text" id="proprietario" name="proprietario">
+                        </div>
+
+                        <div>
+                            <label>Total</label>
+                            <!-- Campos de valor com placeholder para simular o R$ -->
+                            <input type="text" name="total-min" placeholder="R$ 0,00">
+                            <input type="text" name="total-max" placeholder="R$ 0,00">
+                        </div>
+
+                        <div>
+                            <label for="status">status</label>
+                            <select id="status" name="status">
+                                <option value="">Selecione...</option>
+                                <option value="reservada">Reservada</option>
+                                <option value="em-progresso">Em progresso</option>
+                                <option value="finalizada">Finalizada</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="pet">pet</label>
+                            <input type="text" id="pet" name="pet">
+                        </div>
+                    </div>
+
+                    <div class="botoes-form">
+                        <button type="submit">Pesquisar</button>
+                        <button type="reset">Limpar</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- TABELA DE RESULTADOS -->
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Selecionar</th>
+                        <th>Id</th>
+                        <th>Pet</th>
+                        <th>chegada</th>
+                        <th>partida</th>
+                        <th>status</th>
+                        <th>total</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" checked></td>
+                        <td>12349984501</td>
+                        <td>max</td>
+                        <td>02/05/2021</td>
+                        <td>07/05/2020</td>
+                        <!-- Coloquei o texto dentro de um <span> para você conseguir fazer a bordinha colorida no CSS depois -->
+                        <td><span class="status-reservada">Reservada</span></td>
+                        <td>R$ 40,00</td>
+                        <td>
+                            <a href="editar-reserva.html">Editar</a>
+                            <a href="visualizar-reserva.html">Visualizar</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>12349984501</td>
+                        <td>ginger</td>
+                        <td>02/05/2021</td>
+                        <td>07/05/2020</td>
+                        <td><span class="status-progresso">Em progresso</span></td>
+                        <td>R$ 40,00</td>
+                        <td>
+                            <a href="editar-reserva.html">Editar</a>
+                            <a href="visualizar-reserva.html">Visualizar</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>12349984501</td>
+                        <td>max</td>
+                        <td>02/05/2021</td>
+                        <td>07/05/2020</td>
+                        <td><span class="status-finalizada">Finalizada</span></td>
+                        <td>R$ 40,00</td>
+                        <td>
+                            <!-- Como a visão é do Gerente, ele pode editar até as finalizadas! -->
+                            <a href="editar-reserva.html">Editar</a>
+                            <a href="visualizar-reserva.html">Visualizar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+</body>
+</html>

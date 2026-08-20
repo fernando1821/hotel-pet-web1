@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Pet - Editar Pet</title>
+</head>
+<body>
+
+    <!-- MENU LATERAL -->
+    <aside>
+        <h1>Hotel Pet</h1>
+        <nav>
+            <ul>
+                <!-- A classe "ativo" marca a seção Pets -->
+                <li class="ativo"><a href="pets.html">Pets</a></li>
+                <li><a href="usuarios.html">Usuários</a></li>
+                <li><a href="configuracoes.html">Configurações</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- ÁREA PRINCIPAL -->
+    <main>
+        <!-- CABEÇALHO -->
+        <header>
+            <div class="perfil">
+                <img src="foto-padrao.jpg" alt="Foto do usuário">
+                <span>João da Silva</span>
+            </div>
+        </header>
+
+        <!-- CONTEÚDO: EDITAR PET -->
+        <section class="conteudo">
+            <p>Home / Pet / Editar Pet</p>
+            
+            <div class="cartao-formulario">
+                <h2>Editar Pet</h2>
+
+                <form action="pets.html" method="POST">
+                    
+                    <!-- Reutilizando o layout de duas colunas do cadastro -->
+                    <div class="layout-duas-colunas">
+                        
+                        <!-- COLUNA ESQUERDA: Campos de Texto -->
+                        <div class="coluna-campos">
+                            <div class="grupo-input">
+                                <label for="nome">Nome *</label>
+                                <!-- Como é edição, os dados vêm preenchidos -->
+                                <input type="text" id="nome" name="nome" value="Max" required>
+                            </div>
+
+                            <div class="grupo-input">
+                                <label for="tipo">Tipo *</label>
+                                <select id="tipo" name="tipo" required>
+                                    <option value="">Selecione...</option>
+                                    <option value="cachorro" selected>Cachorro</option>
+                                    <option value="gato">Gato</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+
+                            <div class="grupo-input">
+                                <label for="raca">Raça *</label>
+                                <input type="text" id="raca" name="raca" value="Pastor Alemão" required>
+                            </div>
+
+                            <div class="grupo-input">
+                                <label for="tamanho">Tamanho *</label>
+                                <select id="tamanho" name="tamanho" required>
+                                    <option value="">Selecione...</option>
+                                    <option value="pequeno">Pequeno</option>
+                                    <option value="medio">Médio</option>
+                                    <option value="grande" selected>Grande</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- COLUNA DIREITA: Área da Imagem -->
+                        <div class="coluna-imagem">
+                            <label for="foto">Imagem</label>
+                            <div class="box-upload-imagem">
+                                <!-- O CSS se encarregará de exibir a foto atual do pet aqui como fundo -->
+                                <input type="file" id="foto" name="foto" accept="image/*">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- BOTÕES DE AÇÃO -->
+                    <div class="botoes-form-rodape">
+                        <button type="submit" class="btn-salvar">Salvar</button>
+                        <button type="reset" class="btn-limpar">Limpar</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Pet - Ver Pet</title>
+</head>
+<body>
+
+    <!-- MENU LATERAL -->
+    <aside>
+        <h1>Hotel Pet</h1>
+        <nav>
+            <ul>
+                <!-- A classe "ativo" volta para Pets -->
+                <li class="ativo"><a href="pets.html">Pets</a></li>
+                <li><a href="usuarios.html">Usuários</a></li>
+                <li><a href="configuracoes.html">Configurações</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- ÁREA PRINCIPAL -->
+    <main>
+        <!-- CABEÇALHO -->
+        <header>
+            <div class="perfil">
+                <img src="foto-padrao.jpg" alt="Foto do usuário">
+                <span>João da Silva</span>
+            </div>
+        </header>
+
+        <!-- CONTEÚDO: VER PET -->
+        <section class="conteudo">
+            <p>Home / pets / ver pet</p>
+            
+            <div class="cartao-visualizacao">
+                <h2>Ver pet</h2>
+
+                <!-- BOTÕES DE AÇÃO DO TOPO -->
+                <div class="acoes-topo">
+                    <!-- Coloquei emojis provisórios para simular os ícones do Figma -->
+                    <a href="editar-pet.html"><button type="button">✏️ Editar</button></a>
+                    <button type="button">🗑️ Deletar</button>
+                </div>
+
+                <!-- DADOS DO PET -->
+                <div class="dados-lista">
+                    <div class="linha-dado">
+                        <span class="rotulo">Proprietário:</span>
+                        <span class="valor">José da Silva</span>
+                    </div>
+
+                    <div class="linha-dado">
+                        <span class="rotulo">Id:</span>
+                        <span class="valor">1234509876</span>
+                    </div>
+
+                    <div class="linha-dado">
+                        <span class="rotulo">Nome:</span>
+                        <span class="valor">Max</span>
+                    </div>
+
+                    <div class="linha-dado">
+                        <span class="rotulo">Tipo:</span>
+                        <span class="valor">Cachorro</span>
+                    </div>
+
+                    <div class="linha-dado">
+                        <span class="rotulo">Raça:</span>
+                        <span class="valor">Pastor Alemão</span>
+                    </div>
+
+                    <!-- IMAGEM -->
+                    <div class="linha-dado">
+                        <span class="rotulo">Imagem</span>
+                        <span class="valor">
+                            <!-- Imagem de placeholder (marcação) -->
+                            <img src="placeholder-pet.jpg" alt="Foto do pet" width="100" height="100">
+                        </span>
+                    </div>
+
+                    <!-- HISTÓRICO DE RESERVAS -->
+                    <div class="linha-dado">
+                        <span class="rotulo">Reservas:</span>
+                        <span class="valor">
+                            <!-- Uma lista não ordenada (ul) é semanticamente perfeita para isso -->
+                            <ul class="lista-historico-reservas" style="list-style: none; padding: 0;">
+                                <li>
+                                    <a href="visualizar-reserva.html" class="status-texto-azul">02/05/2021 - 07/05/2021 (completa)</a>
+                                </li>
+                                <li>
+                                    <a href="visualizar-reserva.html" class="status-texto-verde">02/05/2021 - 07/05/2021 (em andamento)</a>
+                                </li>
+                            </ul>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- BOTÃO VOLTAR NO RODAPÉ -->
+                <div class="acoes-rodape">
+                    <a href="pets.html"><button type="button">← Voltar</button></a>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

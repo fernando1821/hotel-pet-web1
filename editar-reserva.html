@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Pet - Ver Reserva</title>
+</head>
+<body>
+
+    <!-- MENU LATERAL -->
+    <aside>
+        <h1>Hotel Pet</h1>
+        <nav>
+            <ul>
+                <li><a href="pets.html">Pet</a></li>
+                <li><a href="usuarios.html">Usuários</a></li>
+                <li><a href="configuracoes.html">Configurações</a></li>
+                <!-- Marcação de página ativa continua em Reservas -->
+                <li class="ativo"><a href="reservas.html">Reservas</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- ÁREA PRINCIPAL -->
+    <main>
+        <!-- CABEÇALHO -->
+        <header>
+            <div class="perfil">
+                <img src="foto-padrao.jpg" alt="Foto do usuário">
+                <span>João da Silva</span>
+            </div>
+        </header>
+
+        <!-- CONTEÚDO: VER RESERVA -->
+        <section class="conteudo">
+            <p>Home / revervas / ver reserva</p>
+            
+            <div class="cartao-visualizacao">
+                <h2>Ver reserva</h2>
+
+                <!-- DADOS DA RESERVA -->
+                <div class="dados-lista">
+                    <div class="linha-dado">
+                        <span class="rotulo">Id:</span>
+                        <span class="valor">1234099871</span>
+                    </div>
+
+                    <div class="linha-dado">
+                        <span class="rotulo">Proprietário:</span>
+                        <span class="valor">José da Silva</span>
+                    </div>
+
+                    <div class="linha-dado">
+                        <span class="rotulo">Pet:</span>
+                        <!-- Link para ver os detalhes do pet -->
+                        <span class="valor"><a href="visualizar-pet.html" class="link-destaque">Max</a></span>
+                    </div>
+
+                    <div class="linha-dado">
+                        <span class="rotulo">Chegada:</span>
+                        <span class="valor">02/05/2021</span>
+                    </div>
+
+                    <div class="linha-dado">
+                        <span class="rotulo">Partida:</span>
+                        <span class="valor">07/05/2021</span>
+                    </div>
+
+                    <div class="linha-dado">
+                        <span class="rotulo">Notas:</span>
+                        <span class="valor">Lorem ipsum ...</span>
+                    </div>
+
+                    <div class="linha-dado">
+                        <span class="rotulo">Anotações dos Funcionários:</span>
+                        <span class="valor">Lorem ipsum ...</span>
+                    </div>
+
+                    <!-- GALERIA DE IMAGENS -->
+                    <div class="linha-dado">
+                        <span class="rotulo">Imagens</span>
+                        <div class="galeria-imagens">
+                            <img src="placeholder1.jpg" alt="Imagem 1 da reserva" width="80" height="80">
+                            <img src="placeholder2.jpg" alt="Imagem 2 da reserva" width="80" height="80">
+                            <img src="placeholder3.jpg" alt="Imagem 3 da reserva" width="80" height="80">
+                        </div>
+                    </div>
+
+                    <div class="linha-dado">
+                        <span class="rotulo">Status:</span>
+                        <!-- O span com classe status para fazer a bordinha azul depois -->
+                        <span class="valor"><span class="badge-status-borda">Finalizada</span></span>
+                    </div>
+
+                    <div class="linha-dado">
+                        <span class="rotulo">Total das diárias:</span>
+                        <span class="valor">R$ 40,00</span>
+                    </div>
+
+                    <div class="linha-dado">
+                        <span class="rotulo">Recibo :</span>
+                        <span class="valor"><a href="recibo.pdf" target="_blank" class="link-anexo">📎 recibo.pdf</a></span>
+                    </div>
+
+                    <div class="linha-dado">
+                        <span class="rotulo">Criadado em:</span>
+                        <span class="valor">02/05/2021</span>
+                    </div>
+
+                    <div class="linha-dado">
+                        <span class="rotulo">Atualizado em:</span>
+                        <span class="valor">07/05/2021</span>
+                    </div>
+                </div>
+
+                <!-- BOTÃO VOLTAR -->
+                <div class="acoes-rodape">
+                    <a href="reservas.html"><button type="button">← Voltar</button></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

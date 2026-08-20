@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Pet - Pets</title>
+</head>
+<body>
+
+    <!-- MENU LATERAL -->
+    <aside>
+        <h1>Hotel Pet</h1>
+        <nav>
+            <ul>
+                <li class="ativo"><a href="pets.html">Pets</a></li>
+                <li><a href="usuarios.html">Usuários</a></li>
+                <li><a href="configuracoes.html">Configurações</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- ÁREA PRINCIPAL -->
+    <main>
+        <!-- CABEÇALHO -->
+        <header>
+            <div class="perfil">
+                <img src="foto-padrao.jpg" alt="Foto do usuário">
+                <span>João da Silva</span>
+            </div>
+        </header>
+
+        <!-- CONTEÚDO: PETS -->
+        <section class="conteudo">
+            <p>Home / Pets</p>
+            <h2>Pets</h2>
+            
+            <a href="cadastrar-pet.html"><button>+ Novo Pet</button></a>
+
+            <!-- CAIXA DO FORMULÁRIO DE PESQUISA (Onde vai entrar a borda depois) -->
+            <div class="caixa-pesquisa">
+                <form action="#" method="GET">
+                    
+                    <!-- Agrupando os campos lado a lado -->
+                    <div class="grupo-campos">
+                        <div>
+                            <label for="id">Id</label>
+                            <input type="text" id="id" name="id">
+                        </div>
+
+                        <div>
+                            <label for="raca">raça</label>
+                            <input type="text" id="raca" name="raca">
+                        </div>
+
+                        <div>
+                            <label for="nome">nome</label>
+                            <input type="text" id="nome" name="nome">
+                        </div>
+
+                        <div>
+                            <label for="tamanho">tamanho</label>
+                            <input type="text" id="tamanho" name="tamanho">
+                        </div>
+                    </div>
+
+                    <!-- Botões de ação do formulário -->
+                    <div class="botoes-form">
+                        <button type="submit">Pesquisar</button>
+                        <button type="reset">Limpar</button>
+                    </div>
+                    
+                </form>
+            </div>
+
+            <!-- TABELA DE RESULTADOS -->
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Selecionar</th>
+                        <th>Id</th>
+                        <th>nome</th>
+                        <th>tipo</th>
+                        <th>raça</th>
+                        <th>tamanho</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" checked></td>
+                        <td>12349984501</td>
+                        <td>Max</td>
+                        <td>Cachorro</td>
+                        <td>Pastor Alemão</td>
+                        <td>Grande</td>
+                        <td>
+                            <a href="editar-pet.html">Editar</a>
+                            <a href="visualizar-pet.html">Visualizar</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>12349984501</td>
+                        <td>Ginger</td>
+                        <td>Gato</td>
+                        <td>Não definida</td>
+                        <td>Pequeno</td>
+                        <td>
+                            <a href="editar-pet.html">Editar</a>
+                            <a href="visualizar-pet.html">Visualizar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+</body>
+</html>
