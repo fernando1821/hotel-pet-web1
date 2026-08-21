@@ -4,7 +4,160 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Pet - Login</title>
-    <link rel="stylesheet" href="style.css">
+
+    <style>/* ========================================================
+   1. RESET GLOBAL
+   Remove as margens que o navegador coloca por padrão
+======================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif; /* Fonte neutra */
+}
+
+/* ========================================================
+   2. LAYOUT DA PÁGINA DE LOGIN (Duas Colunas)
+======================================================== */
+main {
+    /* Flexbox permite colocar elementos lado a lado */
+    display: flex;
+    /* 100vh significa que vai ocupar 100% da altura da tela */
+    height: 100vh; 
+    width: 100%;
+}
+
+/* Lado Esquerdo (Imagem) */
+.imagem-login {
+    /* O flex: 1.2 faz essa coluna ser um pouco mais larga que o formulário */
+    flex: 1.2; 
+    background-color: #d9d9d9; /* Cor cinza temporária (igual wireframe) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Para garantir que a imagem não distorça quando você colocar uma foto real */
+.imagem-login img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+/* Lado Direito (Formulário) */
+.area-formulario {
+    flex: 1; 
+    background-color: #e5e5e5; /* Fundo cinza clarinho do wireframe */
+    padding: 60px; /* Espaço interno para não colar nas bordas */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ========================================================
+   3. ESTILOS DOS ELEMENTOS DO FORMULÁRIO
+======================================================== */
+.area-formulario h1 {
+    color: #0d6efd; /* Azul do título */
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+.area-formulario form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaço entre cada campo (input) */
+}
+
+.area-formulario input[type="text"],
+.area-formulario input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px; /* Bordas levemente arredondadas */
+    font-size: 1rem;
+    outline: none;
+}
+
+.area-formulario input:focus {
+    border-color: #0d6efd; /* Borda fica azul ao clicar */
+}
+
+/* Linha com checkbox e o "Esqueci a senha" */
+.opcoes-extras {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: #333;
+}
+
+.opcoes-extras a {
+    color: #0d6efd;
+    text-decoration: none;
+}
+
+/* Botão Enviar */
+.area-formulario button[type="submit"] {
+    background-color: #0d6efd; /* Azulão */
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.area-formulario button[type="submit"]:hover {
+    background-color: #0b5ed7; /* Azul mais escuro quando passa o mouse */
+}
+
+/* ========================================================
+   4. SEPARADOR E REDES SOCIAIS
+======================================================== */
+.separador {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+    color: #666;
+}
+
+.separador hr {
+    flex: 1; /* Faz a linha esticar até preencher o espaço */
+    border: none;
+    border-top: 1px solid #666;
+}
+
+.separador span {
+    padding: 0 15px;
+}
+
+.login-social {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-social a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.2rem;
+}
+
+.criar-conta {
+    text-align: center;
+}
+
+.criar-conta a {
+    color: #0d6efd;
+    text-decoration: none;
+    font-size: 0.9rem;
+}</style>
 </head>
 <body>
 
@@ -12,7 +165,7 @@
        
         <section class="imagem-login">
             
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPjTROxBHu58m-F3plhKqP2oCn042RCWtMnq-n-W0cnw&s=10" alt="Imagem de boas-vindas do Hotel Pet">
+            <img src="foto-login.jpg" alt="Imagem de boas-vindas do Hotel Pet">
         </section>
 
         

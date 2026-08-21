@@ -1,0 +1,422 @@
+
+
+body {
+  
+    display: flex; 
+    min-height: 100vh;
+    background-color: #f5f5f5; 
+}
+
+
+aside {
+    width: 250px;
+    background-color: #ffffff;
+    border-right: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+}
+
+aside h1 {
+    color: #0d6efd;
+    padding: 30px 20px;
+    font-size: 1.8rem;
+}
+
+aside nav ul {
+    list-style: none; 
+}
+
+aside nav ul li a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+
+aside nav ul li.ativo a {
+    background-color: #e6f0ff;
+    color: #0d6efd;
+    border-left: 4px solid #0d6efd;
+}
+
+aside nav ul li a:hover {
+    background-color: #f0f0f0;
+}
+
+
+main {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ccc;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.perfil img {
+    border-radius: 50%; 
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+/* 
+   CONTEÚDO E TELA DE PETS 
+ */
+.conteudo {
+    padding: 30px;
+}
+
+.conteudo p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.conteudo h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.conteudo > a button {
+    background-color: #ffffff;
+    color: #0d6efd;
+    border: 1px solid #0d6efd;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+/* CAIXA DE PESQUISA*/
+.caixa-pesquisa {
+    border: 2px solid #00a8ff; /* A borda azul que você viu no Figma */
+    background-color: #e0e0e0;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.grupo-campos {
+    display: flex;
+    gap: 20px;  
+}
+
+.grupo-campos > div {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.grupo-campos label {
+    color: #666;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.grupo-campos input, .grupo-campos select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.botoes-form {
+    display: flex;
+    justify-content: flex-end; 
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* --- TABELAS --- */
+table {
+    width: 100%;
+    border-collapse: collapse; 
+    background-color: #e0e0e0;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 2px solid #ffffff; 
+}
+
+table th {
+    color: #0d6efd;
+    font-weight: normal;
+}
+
+table td a {
+    color: #b052d1; 
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-right: 5px;
+}
+/* CARTÕES*/
+.cartao-formulario, 
+.cartao-visualizacao {
+    background-color: #e5e5e5; /* Fundo cinza de acordo com o Figma */
+    padding: 40px;
+    border-radius: 4px;
+}
+
+.cartao-formulario h2,
+.cartao-visualizacao h2 {
+    color: #333;
+    font-weight: normal;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+/* FORMULÁRIOS */
+.grupo-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.grupo-input label {
+    color: #666;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.grupo-input input[type="text"],
+.grupo-input input[type="email"],
+.grupo-input input[type="tel"],
+.grupo-input input[type="number"],
+.grupo-input select,
+.grupo-input textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    background-color: #fff;
+    width: 100%;
+  
+    resize: vertical; 
+}
+
+.layout-duas-colunas {
+    display: flex;
+    gap: 50px;
+}
+
+.coluna-campos {
+    flex: 2; 
+}
+
+.coluna-imagem {
+    flex: 1; 
+}
+
+
+.box-upload-imagem {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #999;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: linear-gradient(to bottom right, transparent calc(50% - 1px), #999, transparent calc(50% + 1px)),
+                      linear-gradient(to top right, transparent calc(50% - 1px), #999, transparent calc(50% + 1px));
+}
+
+
+.datas-lado-a-lado {
+    display: flex;
+    gap: 20px;
+}
+
+.datas-lado-a-lado input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Total das diárias */
+.total-diarias {
+    margin: 20px 0;
+    color: #333;
+}
+
+.valor-destaque {
+    color: #0d6efd;
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+
+.botoes-form-rodape {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.btn-salvar {
+    background-color: #0d6efd;
+    color: white;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn-limpar {
+    background-color: transparent;
+    color: #0d6efd;
+    padding: 10px 40px;
+    border: 1px solid #0d6efd;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* TELAS DE VISUALIZAÇÃO */
+.dados-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.linha-dado {
+    display: flex;
+    align-items: flex-start;
+}
+
+.rotulo {
+    width: 250px;
+    text-align: right;
+    padding-right: 20px;
+    color: #333;
+}
+
+.valor {
+    flex: 1;
+    color: #333;
+}
+
+.valor a {
+    color: #0d6efd;
+    text-decoration: none;
+}
+
+.galeria-imagens {
+    display: flex;
+    gap: 10px;
+}
+
+.galeria-imagens img {
+    border: 1px solid #999;
+}
+
+
+.acoes-topo {
+    margin-bottom: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.acoes-topo button,
+.acoes-rodape button {
+    background-color: transparent;
+    color: #0d6efd;
+    border: 1px solid #0d6efd;
+    padding: 5px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* STATUS, BADGES E BOTÕES ESPECIAIS */
+.status-reservada {
+    border: 1px solid #28a745; /* Verde */
+    color: #28a745;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.status-progresso {
+    border: 1px solid #28a745;
+    color: #28a745;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.status-finalizada,
+.badge-status-borda {
+    border: 1px solid #0d6efd; 
+    color: #0d6efd;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.status-texto-azul { color: #0d6efd; }
+.status-texto-verde { color: #28a745; }
+
+/* Botão de anexar Nota Fiscal */
+.btn-adicionar-nota {
+    background-color: #a200ff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.galeria-upload {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.btn-adicionar-quadrado {
+    width: 60px;
+    height: 60px;
+    background-color: #d9d9d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+/* Quadrado de Upload da Imagem */
+.box-upload-imagem {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #999;
+    background-color: transparent;
+    
+
+    position: relative; 
+    
+
+    background-image: linear-gradient(to bottom right, transparent calc(50% - 1px), #999, transparent calc(50% + 1px)),
+                      linear-gradient(to top right, transparent calc(50% - 1px), #999, transparent calc(50% + 1px));
+}
+
+
+.box-upload-imagem input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; 
+    cursor: pointer; 
+}
